@@ -17,7 +17,7 @@ return {
 		local lspkind = require("lspkind")
 
 		-- load vs-code like snippets from plugins (e.g. friendly snippets) 
-		-- require("luasnip.loader.from_vscode").lazy_load() 
+		require("luasnip.loaders.from_vscode").lazy_load() 
 
 		vim.opt.completeopt = "menu,menuone,noselect"
 
