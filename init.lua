@@ -17,4 +17,3 @@ require'nvim-tree'.setup()
 require('lualine').setup()
 require("luasnip.loaders.from_vscode").lazy_load()
 
-
