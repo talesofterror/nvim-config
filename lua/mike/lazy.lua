@@ -21,6 +21,6 @@ require("lazy").setup({
 	{import = "mike.plugins.lsp"},
 }, {
 	install = {
-		colorscheme = { "nightfly" },
+--		colorscheme = { "nightfly" },
 	}, 
 })

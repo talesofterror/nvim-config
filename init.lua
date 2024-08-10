@@ -1,6 +1,13 @@
 vim.cmd("autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE")
 vim.cmd("autocmd TabNew * NvimTreeToggle")
+
 vim.g.mapleader = " "
+vim.cmd([[
+	set termguicolors
+	hi Cursor guifg=red guibg=red
+	hi Cursor2 guifg=white guibg=red
+	set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
+				]])
 
 vim.o.number = true
 vim.o.relativenumber = true
