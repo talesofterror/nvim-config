@@ -18,6 +18,15 @@ return {
       	},
     	},	
    	}
-	})		
+	})
+
+		lspconfig.cssls.setup({})
+		lspconfig.css_variables.setup({})
+		lspconfig.cssmodules_ls.setup({})
+		lspconfig.html.setup({})
+		lspconfig.lua_ls.setup({})
+		-- lspconfig.prettier.setup({})
+		-- lspconfig.prettierd.setup({})
+		lspconfig.tsserver.setup({})
 	end
 }
