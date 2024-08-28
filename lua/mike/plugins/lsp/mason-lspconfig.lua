@@ -8,5 +8,6 @@ return {
 	config = function () 
 		local masonlspconfig = require("mason-lspconfig")
 		masonlspconfig.setup()
+
 	end
 }	

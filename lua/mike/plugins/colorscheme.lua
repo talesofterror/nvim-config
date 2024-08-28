@@ -2,17 +2,33 @@ return {
 	{	
 		"bluz71/vim-nightfly-colors",
 		priority = 1000, 
-		enabled = false,
+		enabled = true,
+		name = "nightfly",
 		config = function ()
-			vim.cmd([[colorscheme nightfly]])
+			vim.cmd.colorscheme "nightfly"
 		end,
 	},
 	{
 	  "eldritch-theme/eldritch.nvim",
-		enabled = false,
+		enabled = true,
+		name = "eldritch",
   	lazy = false,
 	  priority = 1000,
+		transparent = true,
+		config = function ()
+			require("eldritch").setup()
+			vim.cmd.colorscheme "eldritch"
+		end
 	},
+--[[ 	{
+  "craftzdog/solarized-osaka.nvim",
+	enabled = true,
+	name = "solarized-osaka",
+  lazy = false,
+  priority = 1000,
+	transparent = true,
+  opts = {},
+	}, ]]
 	{ 
 	"catppuccin/nvim", 
 	enabled = true,
