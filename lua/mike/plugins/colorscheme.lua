@@ -29,12 +29,12 @@ return {
 	transparent = true,
   opts = {},
 	}, ]]
-	{ 
-	"catppuccin/nvim", 
-	enabled = true,
-	name = "catppuccin", 
+	{
+	"catppuccin/nvim",
+	enabled = false,
+	name = "catppuccin",
 	priority = 1000,
-	config = function () 
+	config = function ()
 		require("catppuccin").setup({
     flavour = "auto", -- latte, frappe, macchiato, mocha
     background = { -- :h background
@@ -85,7 +85,7 @@ return {
 		})
 
 -- setup must be called before loading
-	vim.cmd.colorscheme "catppuccin"
+	vim.cmd.colorscheme "eldritch"
 	end
 	},
 }

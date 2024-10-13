@@ -2,7 +2,7 @@ return {
 	"neovim/nvim-lspconfig",
 	config = function () 
 		local lspconfig = require('lspconfig')
-		local configs = require('lspconfig/configs')
+		local configs = require('lspconfig.configs')
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities.textDocument.completion.completionItem.snippetSupport = true
 
@@ -27,6 +27,6 @@ return {
 		lspconfig.lua_ls.setup({})
 		lspconfig.prettier.setup({})
 		--lspconfig.prettierd.setup()
-		lspconfig.tsserver.setup({})
+		lspconfig.ts_ls.setup({})
 	end
 }
