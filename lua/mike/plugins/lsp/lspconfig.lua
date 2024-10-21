@@ -25,8 +25,8 @@ return {
 		lspconfig.cssmodules_ls.setup({})
 		lspconfig.html.setup({})
 		lspconfig.lua_ls.setup({})
-		lspconfig.prettier.setup({})
-		--lspconfig.prettierd.setup()
+		--lspconfig.prettier.setup({})
+		-- lspconfig.prettierd.setup({})
 		lspconfig.ts_ls.setup({})
 	end
 }
