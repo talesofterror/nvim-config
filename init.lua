@@ -1,5 +1,6 @@
 vim.cmd("autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE")
-vim.cmd("autocmd TabNew * NvimTreeToggle")
+--vim.cmd("autocmd TabNew * NvimTreeToggle")
+vim.cmd("set wrap!")
 
 vim.g.mapleader = " "
 vim.cmd([[
@@ -23,9 +24,13 @@ require("mike.lazy")
 require'nvim-tree'.setup()
 require('lualine').setup()
 require("luasnip.loaders.from_vscode").lazy_load()
+require("telescope").setup({
+  defaults = {
+    layout_config = {
+      horizontal = {
+        preview_cutoff = 0,
+      },
+    },
+  },
+})
 
-{
-'nvim-telescope/telescope.nvim', tag = '0.1.8',
--- or                          , branch = '0.1.x',
-	dependencies = { 'nvim-lua/plenary.nvim' }
-}
