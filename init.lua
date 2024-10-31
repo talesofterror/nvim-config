@@ -2,15 +2,19 @@ vim.cmd("autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE")
 --vim.cmd("autocmd TabNew * NvimTreeToggle")
 vim.cmd("set wrap!")
 
+vim.opt.cursorline = true
+
+vim.o.winblend = 0
+
 vim.g.mapleader = " "
 vim.cmd([[
 	set termguicolors
-	hi Cursor guifg=red guibg=red
-	hi Cursor2 guifg=white guibg=red
+	autocmd vimenter * hi Cursor guifg=white guibg=#ff0000 ctermfg=red ctermbg=white
+	autocmd vimenter * hi Cursor2 guifg=white guibg=red ctermfg=white ctermbg=red
+	hi lCursor guifg=white guibg=red ctermfg=white ctermbg=red
+	autocmd vimenter * hi CursorLine guifg=NONE guibg=#224466
 	set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
 				]])
-
-vim.opt.cursorline = true
 
 vim.o.number = true
 vim.o.relativenumber = true

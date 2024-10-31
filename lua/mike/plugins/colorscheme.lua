@@ -15,6 +15,7 @@ return {
   	lazy = false,
 	  priority = 1000,
 		transparent = true,
+		terminal_colors = false,
 		config = function ()
 			require("eldritch").setup()
 			--vim.cmd.colorscheme "eldritch"
