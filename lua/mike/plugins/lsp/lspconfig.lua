@@ -28,5 +28,7 @@ return {
 		--lspconfig.prettier.setup({})
 		-- lspconfig.prettierd.setup({})
 		lspconfig.ts_ls.setup({})
+		lspconfig.csharp_ls.setup({})
+		lspconfig.csharpier.setup({})
 	end
 }
