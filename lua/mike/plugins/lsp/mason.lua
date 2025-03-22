@@ -7,4 +7,4 @@ return {
 			PATH = "prepend",
 		})
 	end
-} -- must install lua and luarocks for functionality
+} 

@@ -29,6 +29,8 @@ return {
 		-- lspconfig.prettierd.setup({})
 		lspconfig.ts_ls.setup({})
 		lspconfig.csharp_ls.setup({})
-		lspconfig.csharpier.setup({})
+		-- lspconfig.csharpier.setup({})
+		
+		vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 	end
 }
