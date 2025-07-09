@@ -18,6 +18,7 @@ return {
 		terminal_colors = false,
 		config = function ()
 			require("eldritch").setup()
+			transparent = true
 			--vim.cmd.colorscheme "eldritch"
 		end
 	},
@@ -85,7 +86,7 @@ return {
     },
 		})
 
-	-- setup must be called before loading
+		-- setup must be called before loading
 		vim.cmd.colorscheme "catppuccin-mocha"
 	end
 	},

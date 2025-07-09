@@ -1,10 +1,11 @@
-vim.cmd("autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE")
+-- vim.cmd("autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE")
+
 --vim.cmd("autocmd TabNew * NvimTreeToggle")
 vim.cmd("set wrap!")
 
 vim.opt.cursorline = true
 
-vim.o.winblend = 0
+-- vim.o.winblend = 0
 
 vim.g.mapleader = " "
 vim.cmd([[
