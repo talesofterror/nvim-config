@@ -19,8 +19,4 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{import = "mike.plugins"},
 	{import = "mike.plugins.lsp"},
-}, {
-	install = {
---		colorscheme = { "nightfly" },
-	}, 
 })

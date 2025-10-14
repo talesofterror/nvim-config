@@ -41,6 +41,18 @@ require("telescope").setup({
   },
 })
 
+-- Set theme based on OS
+local sysname = vim.loop.os_uname().sysname
 
-vim.cmd.colorscheme "gruvbox"
+if sysname == "Windows_NT" then
+	vim.cmd.colorscheme "moonfly"
+  print("Running on Windows")
+elseif sysname == "Linux" then
+	vim.cmd.colorscheme "gruvbox"
+  print("Running on Linux")
+else
+	vim.cmd.colorscheme "gruvbox"
+  print("Unknown OS: " .. sysname)
+end
+
 
