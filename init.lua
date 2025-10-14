@@ -41,3 +41,6 @@ require("telescope").setup({
   },
 })
 
+
+vim.cmd.colorscheme "gruvbox"
+

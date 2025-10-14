@@ -21,15 +21,17 @@ return {
 	})
 
 		lspconfig.cssls.setup({})
-		--lspconfig.css_variables.setup({})
+		lspconfig.css_variables.setup({})
 		lspconfig.cssmodules_ls.setup({})
 		lspconfig.html.setup({})
 		lspconfig.lua_ls.setup({})
 		--lspconfig.prettier.setup({})
 		-- lspconfig.prettierd.setup({})
 		lspconfig.ts_ls.setup({})
+		lspconfig.tsserver.setup({})
 		lspconfig.csharp_ls.setup({})
 		-- lspconfig.csharpier.setup({})
+		lspconfig.clangd.setup({})
 		
 		vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 	end
