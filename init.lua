@@ -26,7 +26,7 @@ vim.o.tabstop = 2
 --vim.notify(vim.fn.stdpath("config"), vim.log.levels.INFO)
 -- & prints .config/nvim
 
-require("mike.core")
+require("mike.core.keymaps")
 require("mike.lazy")
 require'nvim-tree'.setup()
 require('lualine').setup()
@@ -55,4 +55,5 @@ else
   print("Unknown OS: " .. sysname)
 end
 
+-- vim.api.nvim_set_hl(0, "Comment", { fg = "#ffeeee", italic = true })
 
