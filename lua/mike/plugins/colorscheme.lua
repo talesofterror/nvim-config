@@ -180,7 +180,6 @@ return {
 			vim.g.moonflyItalics = false
 			vim.g.moonflyNormalPmenu = true
 			vim.g.moonflyNormalFloat = true
-			vim.o.winborder = "single"
 			vim.g.moonflyTransparent = true
 		end
 	},

@@ -5,7 +5,6 @@ return {
 	},
 	opts = {
 		open_on_setup = true,
-		open_on_setup = true,
 		open_on_tab = true,
 	},
 	config = function () 

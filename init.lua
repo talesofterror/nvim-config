@@ -18,7 +18,7 @@ vim.cmd([[
 				]])
 
 vim.o.number = true
-vim.o.relativenumber = true
+vim.o.relativenumber = false
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 --vim.notify(vim.fn.stdpath("data"), vim.log.levels.INFO)
