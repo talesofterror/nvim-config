@@ -12,11 +12,28 @@ vim.cmd([[
 	set termguicolors
 	autocmd vimenter * hi Cursor guifg=white guibg=#ff0000 ctermfg=red ctermbg=white
 	autocmd vimenter * hi Cursor2 guifg=white guibg=red ctermfg=white ctermbg=red
-	hi lCursor guifg=white guibg=red ctermfg=white ctermbg=red
-	autocmd vimenter * hi CursorLine guifg=NONE guibg=#224466
+	hi lCursor guifg=white guibg=red ctermfg=white ctermbg=red	
 	set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
-				]])
+	]])
 
+-- ### Set CursorLine dependant on active split/window
+vim.cmd("hi ActiveCursorLine guifg=NONE guibg=#224466")
+vim.cmd("hi InactiveCursorLine guifg=NONE guibg=#333333") -- Or use 'NONE' to clear it
+local group = vim.api.nvim_create_augroup("SplitCursorLine", { clear = true })
+vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
+    group = group,
+    callback = function()
+        vim.wo.winhighlight = "CursorLine:ActiveCursorLine"
+    end,
+})
+vim.api.nvim_create_autocmd("WinLeave", {
+    group = group,
+    callback = function()
+        vim.wo.winhighlight = "CursorLine:InactiveCursorLine"
+    end,
+})
+
+-- ####
 vim.o.number = true
 vim.o.relativenumber = false
 vim.o.shiftwidth = 2
@@ -26,19 +43,21 @@ vim.o.tabstop = 2
 --vim.notify(vim.fn.stdpath("config"), vim.log.levels.INFO)
 -- & prints .config/nvim
 
-require("mike.core.keymaps")
+-- require("mike.core.keymaps")
+-- require("mike.core.init")
+require("mike.core")
 require("mike.lazy")
 require'nvim-tree'.setup()
 require('lualine').setup()
 require("luasnip.loaders.from_vscode").lazy_load()
 require("telescope").setup({
-  defaults = {
-    layout_config = {
-      horizontal = {
-        preview_cutoff = 0,
-      },
-    },
-  },
+	defaults = {
+		layout_config = {
+			horizontal = {
+				preview_cutoff = 0,
+			},
+		},
+	},
 })
 
 -- Set theme based on OS
@@ -46,13 +65,13 @@ local sysname = vim.loop.os_uname().sysname
 
 if sysname == "Windows_NT" then
 	vim.cmd.colorscheme "moonfly"
-  print("Running on Windows")
+	print("Running on Windows")
 elseif sysname == "Linux" then
 	vim.cmd.colorscheme "gruvbox"
-  print("Running on Linux")
+	print("Running on Linux")
 else
 	vim.cmd.colorscheme "gruvbox"
-  print("Unknown OS: " .. sysname)
+	print("Unknown OS: " .. sysname)
 end
 
 -- vim.api.nvim_set_hl(0, "Comment", { fg = "#ffeeee", italic = true })
