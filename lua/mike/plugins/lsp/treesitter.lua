@@ -1,18 +1,15 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	config = function () 
-	  local configs = require("nvim-treesitter.configs")
-
-    configs.setup({
-			"nvim-treesitter/nvim-treesitter",
-			build = ":TSUpdate",
-      ensure_installed = { 
-				"c", "lua", "vim", "vimdoc", "query", 
-				"elixir", "heex", "javascript", "html" 
-			},
+  "nvim-treesitter/nvim-treesitter",
+  build = ":TSUpdate", 
+  config = function()
+    require("nvim-treesitter").setup({
+      -- Avoid using 'all' if you swap distros frequently; specify what you actually use
+      ensure_installed = { "lua", "vim", "vimdoc", "markdown", "python", "javascript" }, 
       sync_install = false,
+      auto_install = true,
       highlight = { enable = true },
-      indent = { enable = true },  
+			indent = { enable = true },
     })
-  end
-} -- windows install required "choco install mingw" from admin powershell
+  end,
+}
+

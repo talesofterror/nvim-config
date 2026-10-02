@@ -17,6 +17,9 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
-	{import = "mike.plugins"},
-	{import = "mike.plugins.lsp"},
+  spec = {
+    { import = "mike.plugins" },
+    { import = "mike.plugins.lsp" },
+  },
 })
+

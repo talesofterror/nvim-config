@@ -4,7 +4,7 @@ return {
 	config = function () 
 		local mason = require("mason")
 		mason.setup({
-			ensure_installed = {"clang", "cpptools", "clang-format"},
+			ensure_installed = {"clang", "cpptools", "clang-format", "cssls"},
 			PATH = "prepend",
 		})
 	end

@@ -183,12 +183,12 @@ return {
 			vim.g.moonflyTransparent = true
 		end
 	},
-	{
-		"nyoom-engineering/oxocarbon.nvim",
-		dependencies = "rktjmp/hotpot.nvim",
-		-- Add in any other configuration; 
-		--   event = foo, 
-		--   config = bar
-		--   end,
-	},
+	-- {
+	-- 	"nyoom-engineering/oxocarbon.nvim",
+	-- 	dependencies = "rktjmp/hotpot.nvim",
+	-- 	-- Add in any other configuration; 
+	-- 	--   event = foo, 
+	-- 	--   config = bar
+	-- 	--   end,
+	-- },
 }
